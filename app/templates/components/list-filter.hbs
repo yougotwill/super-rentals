@@ -1,0 +1,6 @@
+{{!-- This component provides an input field and will yield the results list to the referenced block --}}
+{{input value=value
+    key-up=(action 'handleFilterEntry')
+    class="light"
+    placeholder="Filter By City"}}
+{{yield results}}

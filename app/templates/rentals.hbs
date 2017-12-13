@@ -9,6 +9,11 @@
     {{/link-to}}
 </div>
 
-{{#each model as |rentalUnit|}}
-    {{rental-listing rental=rentalUnit}}
-{{/each}}
+{{!-- We make use of the block form of a component --}}
+{{#list-filter filter=(action 'filterByCity') as |rentals|}} {{!--  displays the filtered contents of the avaiable properties--}}
+    <ul class="results">
+        {{#each rentals as |rentalUnit|}}
+            <li>{{rental-listing rental=rentalUnit}}</li>
+        {{/each}}
+    </ul>
+{{/list-filter}}
