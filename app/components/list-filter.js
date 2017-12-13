@@ -9,14 +9,20 @@ export default Component.extend({
         // passed by calling the object, known as closure actions (grabbing functions or actions from parent components and using them in the child)
         // a promise is return by the filter object and .then occurs
         // promise - a JavaScript object that represents the result of an asynchronous function.
-        this.get('filter')('').then((results) => this.set('results', results));
+        this.get('filter')("").then((allResults) => {
+            this.set('results', allResults.results);
+        });
     },
 
     actions: {
         handleFilterEntry() { // calls the filter function based on the value attribute passed by the {{input}} helper
             let filterInputValue = this.get('value');
             let filterAction = this.get('filter');
-            filterAction(filterInputValue).then((filterResults) => this.set('results', filterResults));
+            filterAction(filterInputValue).then((filterResults) => {
+                if (filterResults.query === this.get('value')) { // ensures that we are in sync
+                    this.set('results', filterResults.results);
+                }
+            });
         }
     }
 });
