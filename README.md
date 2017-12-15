@@ -1,7 +1,8 @@
 # super-rentals
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repo contains the completed EmberJS super-rentals tutorial along with my [Notes](/NOTES.md) for EmberJS which I will clean and update at a later stage.
+
+## Note: This project does not contain the unit testing code currently.
 
 ## Prerequisites
 
@@ -28,10 +29,10 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+~~### Running Tests~~
 
-* `ember test`
-* `ember test --server`
+~~* `ember test`~~
+~~* `ember test --server`~~
 
 ### Building
 
