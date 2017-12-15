@@ -1,6 +1,6 @@
 # super-rentals
 
-This repo contains the completed EmberJS super-rentals tutorial along with my [Notes](/NOTES.md) for EmberJS which I will clean and update at a later stage.
+This repo contains the completed EmberJS [Super Rentals](https://guides.emberjs.com/v2.17.0/tutorial/ember-cli/) tutorial along with my [Notes](/NOTES.md) for EmberJS which I will clean and update at a later stage.
 
 ## Note: This project does not contain the unit testing code currently.
 
