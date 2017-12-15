@@ -1,3 +1,4 @@
+{{!-- where userscan browse the different rental properties --}}
 <div class="jumbo">
     <div class="right tomster"></div>
     <h2>Welcome!</h2>
@@ -8,12 +9,4 @@
     About Us
     {{/link-to}}
 </div>
-
-{{!-- We make use of the block form of a component --}}
-{{#list-filter filter=(action 'filterByCity') as |rentals|}} {{!--  displays the filtered contents of the avaiable properties--}}
-    <ul class="results">
-        {{#each rentals as |rentalUnit|}}
-            <li>{{rental-listing rental=rentalUnit}}</li>
-        {{/each}}
-    </ul>
-{{/list-filter}}
+{{outlet}}

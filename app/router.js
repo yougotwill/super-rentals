@@ -9,7 +9,10 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about'); // routes app to this page when you get to URL/about
   this.route('contact');
-  this.route('rentals');
+  this.route('rentals', function() { // this.route('index, { path: './'}); is implied
+    this.route('show', { path: '/:rental_id'}); // this changes the URL of the sub route
+    // rental_id is passed to the route
+  });
 });
 
 export default Router;
