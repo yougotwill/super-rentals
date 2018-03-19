@@ -72,7 +72,7 @@
 
 ## Core Concepts
 
-![ember-core-concepts](/notes_images/ember-core-concepts.png)
+![ember-core-concepts](./notes_images/ember-core-concepts.png)
 
 
 
@@ -278,7 +278,7 @@ The data and endpoints we setup here will come into play later in the tutorial, 
 
 -   The parent route template will always be displayed as we browse down the different child routes
 
--   this allows us to ad things like common instructions, navigation, footer or sidebars
+-   this allows us to add things like common instructions, navigation, footer or sidebars
 
 -   `ember g route rentals/index` - creates a nested route index with parent rentals
 
@@ -292,3 +292,31 @@ The data and endpoints we setup here will come into play later in the tutorial, 
 
 -   use the `{{link-to}}` helper takes the route name and model object as arguments
 -   when you pass a second argument to the `link-to` block helper it will by default serialize the object to the ID of the model into the URL (you could just pass rental.id for clarity)
+
+
+
+# Ember Electron NOTES
+
+An Ember addon to turn Ember apps into cross-platform desktop applications, taking care of development, tests, compilation, and installer creation.
+
+-   `ember electron` - Run app in Electron with live-reload server
+-   `ember electron:test` - Test the app using Electron
+-   `ember electron:test --server` - Test with Electron in development server mode
+-   `ember electron:package` - Create binaries (.app, .exe, etc)
+-   `ember electron:make` - Generate platform specific distributables (installers, distribution packages, etc)
+-   `ember electron:build` - Build out Ember app with Electron instrumentation (useful for optimizing multi-platform builds)
+-   `ember electron:assemble` - Assemble Electron application project (useful for debugging builds)
+
+
+
+
+# Building a complex web app with EMBER
+
+-   currently using SCSS
+
+## Create a navigation partial
+
+-   using a partial is a temporary thing, it should be converted to a component later
+-   the ```partial``` helper lets you insert snippets from other templates
+-   The `outlet` helper is a general helper, a placeholder, where deeper level content will be inserted. The `outlet` in `application.hbs` means that almost all content from other pages will appear inside this section. For this reason, `application.hbs` is a good place to determine the main structure of our website. In our case we have a `container` div, a navigation bar, and the real content.
+-   ​
